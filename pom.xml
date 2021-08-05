@@ -8,14 +8,22 @@
     <version>1.0</version>
     <modules>
         <module>senri-boot-common</module>
+        <module>senri-boot-modules</module>
     </modules>
     <packaging>pom</packaging>
 
     <name>senri-boot</name>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.3</version>
+        <relativePath/>
+    </parent>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.5.21</kotlin.version>
+        <kotlin.version>1.5.10</kotlin.version>
         <kotlin.code.style>official</kotlin.code.style>
         <junit.version>4.12</junit.version>
     </properties>
@@ -40,6 +48,10 @@
         </dependency>
     </dependencies>
 
+    <dependencyManagement>
+
+    </dependencyManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -62,6 +74,13 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>
