@@ -2,25 +2,28 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
+      <profile name="Annotation profile for senri-boot" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.5.3/spring-boot-configuration-processor-2.5.3.jar" />
+        </processorPath>
         <module name="module-system-api" />
-        <module name="senri-boot-common" />
         <module name="modules-system-biz" />
+        <module name="senri-boot-common" />
         <module name="module-system-start" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="module-system" options="-parameters" />
+      <module name="module-system" options="" />
       <module name="module-system-api" options="-parameters" />
       <module name="module-system-start" options="-parameters" />
       <module name="modules-system-biz" options="-parameters" />
       <module name="senri-boot-common" options="-parameters" />
-      <module name="senri-boot-modules" options="-parameters" />
+      <module name="senri-boot-modules" options="" />
     </option>
   </component>
 </project>
