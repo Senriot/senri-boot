@@ -22,7 +22,7 @@ import java.util.Date
 private const val AUTHORITIES_KEY = "auth"
 
 @Component
-class TokenProvider(applicationProperties: ApplicationProperties)
+class TokenProvider(private val  applicationProperties: ApplicationProperties)
 {
 
     private val log = LoggerFactory.getLogger(javaClass)

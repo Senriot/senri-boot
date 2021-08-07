@@ -2,4 +2,28 @@ server:
   port: 8080
 
 
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/SenriBoot
+    username: root
+    password: senriot
+    pool:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/SenriBoot
+    username: root
+    password: senriot
+    driver-class-name: org.postgresql.Driver
+application:
+  security:
+    authentication:
+      jwt:
+        base64-secret: MTJjZGRkMWVkY2IyZjJjNDRiOTI4Mjk0MzAyNTQ3NjEyY2U4YjhjNmQyMjVmYTJlNGI0NDcxNzNiODA5MWI2YTZjMGVkM2ExMTUwNmRlYzFjODUwMWU1YjYwNTMxYTdmNGIwZGEwZjY0NTU5NzRjZjAwMTk2ODg5MDA0ZmFjZTM=
+        token-validity-in-seconds: 86400
+        token-validity-in-seconds-for-remember-me: 2592000
+
 

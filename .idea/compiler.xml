@@ -10,8 +10,8 @@
           <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.5.3/spring-boot-configuration-processor-2.5.3.jar" />
         </processorPath>
         <module name="module-system-api" />
-        <module name="modules-system-biz" />
         <module name="senri-boot-common" />
+        <module name="modules-system-biz" />
         <module name="module-system-start" />
       </profile>
     </annotationProcessing>
